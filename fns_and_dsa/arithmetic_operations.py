@@ -29,3 +29,17 @@ Return the result of the arithmetic operation.
 Note: - Focus on implementing the perform_operation function in arithmetic_operations.py. Ensure your function correctly handles the operations based on the inputs. - You do not need to create or modify main.py. It is provided for you to test your function. The checker will use this main.py to import your arithmetic_operations.py script and test its functionality.
 
 """
+
+"""from arithmetic_operations import perform_operation
+
+def main():
+    print("Arithmetic Operations")
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+
+    result = perform_operation(num1, num2, operation)
+    print(f"Result: {result}")
+
+if __name__ == "__main__":
+    main()"""
