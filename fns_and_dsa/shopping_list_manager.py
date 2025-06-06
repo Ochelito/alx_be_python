@@ -77,9 +77,8 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = input("Enter your choice: ")
-
-        if choice == '1':
+        choice = int(input("Enter your choice: "))
+        if choice == 1:
             add_item = input("Which item would you like to add- Orange, Mango, Grape: ").strip().lower()
             
             if add_item == "orange":
@@ -94,7 +93,7 @@ def main():
             else:
                 print (f"{add_item} is not Available!")
             
-        elif choice == '2':
+        elif choice == 2:
             if shopping_list != []:
                 print ("Items in your Cart: ", shopping_list)
                 remove_item = input(" Which Item would you like to remove? ").strip().lower()
@@ -106,10 +105,10 @@ def main():
             else:
                 print ("Your Cart is Empty! Add Items.")
         
-        elif choice == '3':
+        elif choice == 3:
             print (shopping_list)
 
-        elif choice == '4':
+        elif choice == 4:
             print("Goodbye!")
             break
         else:
