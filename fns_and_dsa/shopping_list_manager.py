@@ -1,3 +1,55 @@
+def display_menu():
+    print("Shopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
+    print("4. Exit")
+
+def main():
+    shopping_list = []
+
+    while True:
+        display_menu()
+    
+        choice = input("Enter your choice: "))
+        print ("Invalid input. Please Enter a number from 1-4")
+    
+        if choice == '1':
+            available_items = ["Orange", "Mango", "Grape"]
+            print ("Available Items:", available_items)
+            add_item = input("Which item would you like to add: ").strip().lower()
+            
+            if add_item in available_items:
+                shopping_list.append(add_item)
+                print (f"{add_item} Added to your Cart!")
+            else:
+                print (f"{add_item} is not Available!")
+            
+        elif choice == '2':
+            if shopping_list:
+                print ("Items in your Cart: ", shopping_list)
+                remove_item = input(" Which Item would you like to remove? ").strip().lower()
+                if remove_item in shopping_list:
+                    shopping_list.remove(remove_item)
+                    print(f"{remove_item} Has been removed from your Cart")
+                else:
+                    print (f"{remove_item} is not present in your cart")
+            else:
+                print ("Your Cart is Empty! Add Items.")
+        
+        elif choice == '3':
+            print (shopping_list)
+             
+        elif choice == '4':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
+
 """
 Objective: Utilize Python lists to create a simple shopping list manager that allows users to add items, view the current list, and remove items.
 
@@ -66,7 +118,7 @@ while True:
     else:
         print ("Invalid Command! Please try again")"""
 
-def display_menu():
+"""def display_menu():
     print("\nShopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
@@ -121,4 +173,4 @@ def main():
             print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
-    main()
+    main()"""
