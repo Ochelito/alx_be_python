@@ -67,7 +67,7 @@ while True:
         print ("Invalid Command! Please try again")"""
 
 def display_menu():
-    print("Shopping List Manager")
+    print("\nShopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -75,19 +75,22 @@ def display_menu():
 
 def main():
     shopping_list = []
+    available_items = ["orange", "mango", "grape"]
+
     while True:
         display_menu()
-        choice = int(input("Enter your choice: "))
+    
+        try:
+            choice = int(input("Enter your choice: "))
+        except ValueError:
+            print ("Invalid input. Please Enter a number from 1-4")
+            continue
+    
         if choice == 1:
-            add_item = input("Which item would you like to add- Orange, Mango, Grape: ").strip().lower()
+            print ("Available Items:", available_items)
+            add_item = input("Which item would you like to add: ").strip().lower()
             
-            if add_item == "orange":
-                shopping_list.append(add_item)
-                print (f"{add_item} Added to your Cart!")
-            elif add_item == "mango":
-                shopping_list.append(add_item)
-                print (f"{add_item} Added to your Cart!")
-            elif add_item == "grape":
+            if add_item in available_items:
                 shopping_list.append(add_item)
                 print (f"{add_item} Added to your Cart!")
             else:
@@ -106,7 +109,10 @@ def main():
                 print ("Your Cart is Empty! Add Items.")
         
         elif choice == 3:
-            print (shopping_list)
+            if shopping_list:
+                print ("\nYour Cart:")
+                for index, item in enumerate(shopping_list, start=1):
+                    print(f"{index}.{item}")
 
         elif choice == 4:
             print("Goodbye!")
