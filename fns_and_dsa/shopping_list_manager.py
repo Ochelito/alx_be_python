@@ -11,7 +11,7 @@ def main():
     while True:
         display_menu()
     
-        choice = input("Enter your choice: ")
+        choice = input("Enter the item to add. ")
         print ("Invalid input. Please Enter a number from 1-4")
     
         if choice == '1':
