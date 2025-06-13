@@ -86,12 +86,12 @@ class BankAccount:
             #Return "insufficient funds"
     
     def display_balance(self):
-        return f"Current Balance: ${self.account_balance}"
+        return f"Current Balance: ${self.account_balance:.2F}" #to get 2 decimal places
     
     
-"""accnt = BankAccount()
-accnt.deposit(400)
-accnt.withdraw(200)
-print(accnt.withdraw())"""
+#accnt = BankAccount()
+#accnt.deposit(400)
+#accnt.withdraw(200)
+#print(accnt.display_balance())
 
     
