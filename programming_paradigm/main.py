@@ -11,7 +11,7 @@ def main():
         denominator = float(sys.argv[2])
 
     except ValueError:
-        print("Please input only valid numbers")
+        print("Error: Please enter numeric values only.")
         return
 
     result = safe_divide(numerator, denominator)

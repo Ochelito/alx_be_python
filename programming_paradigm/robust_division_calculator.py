@@ -57,6 +57,6 @@ def safe_divide(numerator:float, denominator:float):
         #return divide
 
     except ZeroDivisionError:
-        return "Error: Denominator must be greater than zero"
+        return "Error: Cannot divide by zero."
         #if denominator ==0:  #pointless becaus already the error will be because it is 0 
           #  print("Error: Denominator must be greater than zero")
