@@ -65,5 +65,4 @@ def safe_divide(numerator:float, denominator:float):
           #  print("Error: Denominator must be greater than zero")
 
     except ValueError:
-        print("Error: Please enter numeric values only.")
-        return
+        return "Error: Please enter numeric values only."
