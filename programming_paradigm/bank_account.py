@@ -70,7 +70,7 @@ This task combines learning OOP concepts with practical command line interaction
 class BankAccount:
 
     def __init__(self, account_balance = 0):
-        self.account_balance = account_balance
+        self.account_balance=account_balance
 
     def deposit(self, amount ):
         #self.amount = amount
@@ -79,7 +79,7 @@ class BankAccount:
     def withdraw(self, amount):
         #self.amount = amount #unneccessary unless you want to use it later
         if amount <= self.account_balance:
-            self.account_balance -=amount
+            self.account_balance -= amount
             return True
         else:
             return False

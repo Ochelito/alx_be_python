@@ -7,17 +7,17 @@ def main():
         sys.exit(1)
 
 
-    numerator = (sys.argv[1])
-    denominator = (sys.argv[2])
+    numerator=(sys.argv[1])
+    denominator=(sys.argv[2])
 
-    result = safe_divide(numerator, denominator)
+    result=safe_divide(numerator, denominator)
 
      # Only prefix with "Result:" if it's a valid number
     if isinstance(result, (int, float)):
         print(f"The result of the division is {result:.1f}")
 
     else:
-        print(result) 
+        print(result)
     
 
 if __name__ == "__main__":

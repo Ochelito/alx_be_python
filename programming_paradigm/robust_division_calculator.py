@@ -52,8 +52,8 @@ This task helps you practice writing error-resistant code, a crucial skill in so
 def safe_divide(numerator:float, denominator:float):
 
     try:
-        numerator = float(numerator)
-        denominator = float(denominator)
+        numerator=float(numerator)
+        denominator=float(denominator)
 
         return numerator/denominator
         #divide = numerator/denominator
