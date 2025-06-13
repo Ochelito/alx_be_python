@@ -14,7 +14,7 @@ def main():
 
      # Only prefix with "Result:" if it's a valid number
     if isinstance(result, (int, float)):
-        print(f"The result of the division is {result} ")
+        print(f"The result of the division is {result:.1F} ")
 
     else:
         print(result) 
