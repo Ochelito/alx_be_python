@@ -50,8 +50,11 @@ This task helps you practice writing error-resistant code, a crucial skill in so
 
 
 def safe_divide(numerator:float, denominator:float):
-   
+
     try:
+        numerator = float(numerator)
+        denominator = float(denominator)
+
         return numerator/denominator
         #divide = numerator/denominator
         #return divide
@@ -60,3 +63,7 @@ def safe_divide(numerator:float, denominator:float):
         return "Error: Cannot divide by zero."
         #if denominator ==0:  #pointless becaus already the error will be because it is 0 
           #  print("Error: Denominator must be greater than zero")
+
+    except ValueError:
+        print("Error: Please enter numeric values only.")
+        return
