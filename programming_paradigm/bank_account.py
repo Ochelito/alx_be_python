@@ -86,7 +86,7 @@ class BankAccount:
             #Return "insufficient funds"
     
     def display_balance(self):
-        return f"Your Current Acount Balance is: N{self.account_balance}"
+        return f"Your Current Acount Balance is: {self.account_balance}"
     
     
 """accnt = BankAccount()

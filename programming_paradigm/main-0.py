@@ -2,13 +2,17 @@ import sys
 from bank_account import BankAccount
 
 def main():
-    account = BankAccount(100)  # Example starting balance
-    if len(sys.argv) < 2:
+    account = BankAccount(100)  # Example creates a bank account starting from 100
+    if len(sys.argv) < 2: #remember 0 is script name, 1 is first argument... so if <2 then...
         print("Usage: python main.py <command>:<amount>")
         print("Commands: deposit, withdraw, display")
         sys.exit(1)
 
-    command, *params = sys.argv[1].split(':')
+    command, *params = sys.argv[1].split(':') #Gets the first command-line argument (like "deposit:50"). 
+
+#Splits it at the colon (:) into:
+#command = "deposit"
+#params = ["50"]
     amount = float(params[0]) if params else None
 
     if command == "deposit" and amount is not None:
