@@ -72,7 +72,7 @@ class BankAccount:
     def __init__(self, account_balance = 0):
         self.account_balance = account_balance
 
-    def deposit(self, amount):
+    def deposit(self, amount ):
         #self.amount = amount
         self.account_balance += amount
 
@@ -87,11 +87,5 @@ class BankAccount:
     
     def display_balance(self):
         return f"Current Balance: ${self.account_balance:.2F}" #to get 2 decimal places
-    
-    
-#accnt = BankAccount()
-#accnt.deposit(400)
-#accnt.withdraw(200)
-#print(accnt.display_balance())
 
     

@@ -2,7 +2,7 @@ import sys
 from bank_account import BankAccount
 
 def main():
-    account = BankAccount(100)  # Example creates a bank account starting from 100
+    account = BankAccount(250)  # Example creates a bank account starting from 100
     if len(sys.argv) < 2: #remember 0 is script name, 1 is first argument... so if <2 then...
         print("Usage: python main.py <command>:<amount>")
         print("Commands: deposit, withdraw, display")
@@ -18,6 +18,7 @@ def main():
     if command == "deposit" and amount is not None:
         account.deposit(amount)
         print(f"Deposited: ${amount}")
+
     elif command == "withdraw" and amount is not None:
         if account.withdraw(amount):
             print(f"Withdrew: ${amount}")
@@ -30,3 +31,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
