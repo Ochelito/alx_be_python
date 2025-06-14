@@ -60,9 +60,9 @@ def safe_divide(numerator:float, denominator:float):
         #return divide
 
     except ZeroDivisionError:
-        return "Error: Cannot divide by zero."
+        print("Error: Cannot divide by zero.") #used print instead of return
         #if denominator ==0:  #pointless becaus already the error will be because it is 0 
           #  print("Error: Denominator must be greater than zero")
 
     except ValueError:
-        return "Error: Please enter numeric values only."
+        print("Error: Please enter numeric values only.") #used print instead of return
