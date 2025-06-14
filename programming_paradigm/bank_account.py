@@ -68,17 +68,19 @@ Use main.py to test your BankAccount class by performing various operations. Adj
 This task combines learning OOP concepts with practical command line interaction, enhancing your understanding of Python programming."""
 
 class BankAccount:
+    def __init__(self, initial_balance = 0):
+        self.account_balance=initial_balance
 
-    def __init__(self, account_balance = 0):
-        self.account_balance=account_balance
-
-    def deposit(self, amount ):
+    def deposit(self, amount):
         #self.amount = amount
-        self.account_balance += amount
+        if amount >0:
+            self.account_balance += amount
+        else:
+            print("Deposit amount must be positive.")
 
     def withdraw(self, amount):
         #self.amount = amount #unneccessary unless you want to use it later
-        if amount <= self.account_balance:
+        if amount<=self.account_balance:
             self.account_balance -= amount
             return True
         else:
@@ -86,6 +88,6 @@ class BankAccount:
             #Return "insufficient funds"
     
     def display_balance(self):
-        return f"Current Balance: ${self.account_balance:.2F}" #to get 2 decimal places
+        print(f"Current Balance: ${self.account_balance:.2F}") #to get 2 decimal places
 
     
