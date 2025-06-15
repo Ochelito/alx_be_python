@@ -57,7 +57,7 @@ def safe_divide(numerator, denominator):
 
         result = num1/num2
 
-        return result
+        return f"The result of the division is {result}"
         #divide = numerator/denominator
         #return divide
 
