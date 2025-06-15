@@ -49,13 +49,15 @@ Test your function using main.py by passing different types of inputs via comman
 This task helps you practice writing error-resistant code, a crucial skill in software development."""
 
 
-def safe_divide(numerator:float, denominator:float):
+def safe_divide(numerator, denominator):
 
     try:
-        numerator=float(numerator)
-        denominator=float(denominator)
+        num1=float(numerator)
+        num2=float(denominator)
 
-        return numerator/denominator
+        result = num1/num2
+
+        return result
         #divide = numerator/denominator
         #return divide
 
